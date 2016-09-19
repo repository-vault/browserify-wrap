@@ -19,6 +19,17 @@ b.plugin(wrap, {
 b.bundle().pipe(somewhere);
 ```
 
+## wrap.concat(files [,sep])
+As a common suffix might be to add some "raw" files, [browserify-wrap](https://github.com/131/browserify-wrap) provide a tiny helper for this (simple wrapper for map fs.readFileSync)
+
+```
+const wrap = require('browserify-wrap');
+var suffix = wrap.concat(['file1.js', 'file2.js'], ';');
+//suffix is now a concatenation of file1 & file2 (using ';' as separator)
+```
+
+
+
 
 # Credits
 * [131](https://github.com/131)
