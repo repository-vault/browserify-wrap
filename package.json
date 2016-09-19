@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node node_modules/istanbul/lib/cli.js  cover --report text-summary --report html --report lcov  node_modules/mocha/bin/_mocha",
-    "coveralls": "npm install coveralls && node ./node_modules/coveralls/bin/coveralls.js < ./coverage/html/lcov.info"
+    "coveralls": "npm install coveralls && node ./node_modules/coveralls/bin/coveralls.js < ./coverage/lcov.info"
   },
   "author": "Francois Leurent <131.js@cloudyks.org>",
   "license": "ISC",
