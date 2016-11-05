@@ -1,6 +1,6 @@
 {
   "name": "browserify-wrap",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "browserify-wrap, a _very simple_ browserify plugin to wrap your output bundle with a prefix or a suffix (or both)",
   "main": "index.js",
   "scripts": {
@@ -9,10 +9,10 @@
   },
   "author": "Francois Leurent <131.js@cloudyks.org>",
   "license": "ISC",
-  "engines" : {
-    "node" : ">=4.0.0"
+  "engines": {
+    "node": ">=4.0.0"
   },
-  "dependencies": { },
+  "dependencies": {},
   "devDependencies": {
     "browserify": "^13.0.0",
     "concat-stream": "^1.5.2",
