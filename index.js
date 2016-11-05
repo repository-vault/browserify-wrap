@@ -1,7 +1,8 @@
 "use strict";
 
-const  fs     = require('fs');
-const through = require('through2');
+const  fs        = require('fs');
+const Transform  = require('stream').Transform;
+
 
 const wrapper  = function(b, opts) {
 
@@ -12,7 +13,7 @@ const wrapper  = function(b, opts) {
     if(opts.prefix)
       prefixed = false;
 
-    var write = function(buf, enc, next) {
+    var transform = function(buf, enc, next) {
       if(!prefixed)
         this.push(opts.prefix);
 
@@ -21,13 +22,13 @@ const wrapper  = function(b, opts) {
       next();
     };
 
-    var end = function() {
+    var flush = function() {
       if(opts.suffix)
         this.push(opts.suffix)
       this.push(null);
     }
 
-    b.pipeline.get("wrap").unshift(through(write, end));
+    b.pipeline.get("wrap").unshift(new Transform({transform, flush}));
   })
 }
 

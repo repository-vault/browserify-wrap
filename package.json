@@ -9,9 +9,10 @@
   },
   "author": "Francois Leurent <131.js@cloudyks.org>",
   "license": "ISC",
-  "dependencies": {
-    "through2": "^2.0.1"
+  "engines" : {
+    "node" : ">=4.0.0"
   },
+  "dependencies": { },
   "devDependencies": {
     "browserify": "^13.0.0",
     "concat-stream": "^1.5.2",
