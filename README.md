@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
 
-# API
+# API/demo
 ```
 const wrap = require('browserify-wrap');
 
@@ -25,6 +25,11 @@ b.plugin(wrap, {
 
 b.bundle().pipe(somewhere);
 ```
+## CLI usage
+```
+browserify --plugin [ browserify-wrap --suffix "; after browserify content" --prefix "[content, e.g. license, at output bundle start]" ] myfile.js
+```
+
 
 ## wrap.concat(files [,sep])
 As a common suffix might be to add some "raw" files, [browserify-wrap](https://github.com/131/browserify-wrap) provide a tiny helper for this (simple wrapper for map fs.readFileSync)
